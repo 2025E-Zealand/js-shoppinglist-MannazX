@@ -47,6 +47,15 @@ function changeLiElementText(nodeId, elemId, newText) {
 
 }
 
+function countLiElementList(id) {
+    let node = document.getElementById(id);
+    let liElement = node.getElementsByTagName("li");
+    let count = liElement.length;
+
+    return count;
+    
+}
+
 function findNode(id, type, nodeText) {
     let node = document.getElementById(id);
     node.style.color = "red";
