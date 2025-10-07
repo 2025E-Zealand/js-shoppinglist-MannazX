@@ -37,6 +37,16 @@ function removeLiElement(nodeId, elemId) {
 
 }
 
+function changeLiElementText(nodeId, elemId, newText) {
+    let node = document.getElementById(nodeId);
+    let liElement = node.getElementsByTagName("li");
+    let item = liElement.item(elemId);
+    item.innerText = newText;
+
+    return node;
+
+}
+
 function findNode(id, type, nodeText) {
     let node = document.getElementById(id);
     node.style.color = "red";
@@ -54,13 +64,13 @@ function findNode(id, type, nodeText) {
 }
 
 let textElem = createNode("list", "healthy", "Pears")
-console.log(textElem);
+//console.log(textElem);
 let newNode = addItemToList("list", textElem);
-console.log(newNode);
-//removeLiElement("list", "0")
-
+//console.log(newNode);
 //let newClass = changeClassAttribute(textElem, "unhealthy");
 //console.log(newClass);
+//removeLiElement("list", "0")
+changeLiElementText("list", 0, "Vodka");
 
 
 //let newNode = findNode("list", "li");
