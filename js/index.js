@@ -2,12 +2,21 @@
 console.log("Shoppinglist")
 
 
-function createTextNode(id, attr, nodeText) {
+function createNode(idAtt, classAtt, nodeText) {
     let element = document.createElement("li");
-    element.setAttribute("id", id);
-    element.setAttribute("class", "healthy");
+    element.setAttribute("id", idAtt);
+    element.setAttribute("class", classAtt);
+    let textNode = document.createTextNode(nodeText);
+    element.appendChild(textNode);
 
-    let node = findNode(id, attr, nodeText);
+    return element;
+
+}
+
+function addItemToList(id, element) {
+    let node = document.getElementById(id);
+    node.appendChild(element);
+
     return node;
 
 }
@@ -27,6 +36,12 @@ function findNode(id, type, nodeText) {
     return node;
 
 }
+
+let textElem = createNode("list", "healthy", "Pears")
+console.log(textElem);
+let newNode = addItemToList("list", textElem);
+console.log(newNode);
+
 
 //let newNode = findNode("list", "li");
 //console.log(newNode);
