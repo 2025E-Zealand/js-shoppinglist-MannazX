@@ -21,10 +21,20 @@ function addItemToList(id, element) {
 
 }
 
-function changeAttribute(element, value) {
+function changeClassAttribute(element, value) {
     element.setAttribute("class", value);
     
     return element;
+}
+
+function removeLiElement(nodeId, elemId) {
+    let node = document.getElementById(nodeId)
+    let liElement = node.getElementsByTagName("li");
+    let item = liElement.item(elemId);
+    node.removeChild(item);
+
+    return node;
+
 }
 
 function findNode(id, type, nodeText) {
@@ -47,7 +57,9 @@ let textElem = createNode("list", "healthy", "Pears")
 console.log(textElem);
 let newNode = addItemToList("list", textElem);
 console.log(newNode);
-//let newClass = changeAttribute(textElem, "unhealthy");
+//removeLiElement("list", "0")
+
+//let newClass = changeClassAttribute(textElem, "unhealthy");
 //console.log(newClass);
 
 
