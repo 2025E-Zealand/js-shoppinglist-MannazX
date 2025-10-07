@@ -21,6 +21,12 @@ function addItemToList(id, element) {
 
 }
 
+function changeAttribute(element, value) {
+    element.setAttribute("class", value);
+    
+    return element;
+}
+
 function findNode(id, type, nodeText) {
     let node = document.getElementById(id);
     node.style.color = "red";
@@ -41,6 +47,8 @@ let textElem = createNode("list", "healthy", "Pears")
 console.log(textElem);
 let newNode = addItemToList("list", textElem);
 console.log(newNode);
+//let newClass = changeAttribute(textElem, "unhealthy");
+//console.log(newClass);
 
 
 //let newNode = findNode("list", "li");
