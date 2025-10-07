@@ -4,7 +4,7 @@ console.log("Shoppinglist")
 
 function createTextNode(id, attr, nodeText) {
     let element = document.createElement("li");
-    element.setAttribute("id", "0");
+    element.setAttribute("id", id);
     element.setAttribute("class", "healthy");
 
     let node = findNode(id, attr, nodeText);
