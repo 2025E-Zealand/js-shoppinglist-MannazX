@@ -1,6 +1,13 @@
 //Write your Javascript code here
 console.log("Shoppinglist")
 
+document.getElementById("addItem").addEventListener("click", )
+let inputTextElement = getElementById("newItem");
+
+function addNewItem() {
+    let inputText = inputTextElement.value;
+    let itemId = 
+}
 
 function createNode(idAtt, classAtt, nodeText) {
     let element = document.createElement("li");
@@ -58,9 +65,9 @@ function countLiElementList(id) {
 
 function moveNodeofClass(startId, endId, classAttr) {
     let startLocation = document.getElementById(startId);
-    let classItems = node.getElementsByClassName(classAttr);
+    let classItems = startLocation.getElementsByClassName(classAttr);
     let newLocation = document.getElementById(endId);
-    for (let i = 0; i < classItems; i++) {
+    for (let i = 0; i < classItems.Length; i++) {
         startLocation.removeChild(classItems[i])
         newLocation.appendChild(classItems[i])
     }
