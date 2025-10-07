@@ -1,14 +1,6 @@
 //Write your Javascript code here
 console.log("Shoppinglist")
 
-document.getElementById("addItem").addEventListener("click", )
-let inputTextElement = getElementById("newItem");
-
-function addNewItem() {
-    let inputText = inputTextElement.value;
-    let itemId = 
-}
-
 function createNode(idAtt, classAtt, nodeText) {
     let element = document.createElement("li");
     element.setAttribute("id", idAtt);
