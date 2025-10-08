@@ -96,6 +96,3 @@ let count = countLiElementList("list");
 console.log(count);
 
 //moveNodeofClass("list", "listUnhealthy", "unhealthy");
-
-//let newNode = findNode("list", "li");
-//console.log(newNode);
