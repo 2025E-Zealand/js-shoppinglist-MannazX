@@ -99,12 +99,3 @@ console.log(count);
 
 //let newNode = findNode("list", "li");
 //console.log(newNode);
-
-/*
-const btn = document.querySelector("button");
-
-btn.addEventListener("click", () => {
-    const nodeText = "";
-    let node = findNode("list", "li", nodeText)
-})
-*/
