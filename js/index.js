@@ -55,18 +55,18 @@ function countLiElementList(id) {
 
 }
 
+// Broken Method
 function moveNodeofClass(startId, endId, classAttr) {
     let startLocation = document.getElementById(startId);
     let classItems = startLocation.getElementsByClassName(classAttr);
+    startLocation.remove(classItems);
     let newLocation = document.getElementById(endId);
-    for (let i = 0; i < classItems.Length; i++) {
-        startLocation.removeChild(classItems[i])
-        newLocation.appendChild(classItems[i])
-    }
+    newLocation.append(classItems);
 
     return newLocation;
 }
 
+/*
 function findNode(id, type, nodeText) {
     let node = document.getElementById(id);
     node.style.color = "red";
@@ -82,6 +82,7 @@ function findNode(id, type, nodeText) {
     return node;
 
 }
+*/
 
 let textElem = createNode("list", "healthy", "Pears")
 //console.log(textElem);
@@ -90,11 +91,11 @@ let newNode = addItemToList("list", textElem);
 //let newClass = changeClassAttribute(textElem, "unhealthy");
 //console.log(newClass);
 //removeLiElement("list", "0")
-changeLiElementText("list", 0, "Vodka");
+//changeLiElementText("list", 0, "Vodka");
 let count = countLiElementList("list");
 console.log(count);
 
-moveNodeofClass("list", "listUnhealthy", "unhealthy");
+//moveNodeofClass("list", "listUnhealthy", "unhealthy");
 
 //let newNode = findNode("list", "li");
 //console.log(newNode);
